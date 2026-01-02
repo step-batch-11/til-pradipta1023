@@ -1,9 +1,9 @@
 // scripts/generate_til.js
 
-const LOG_DIR = 'logs';
+const LOG_DIR = "logs";
 
 function pad(n) {
-  return String(n).padStart(2, '0');
+  return String(n).padStart(2, "0");
 }
 
 function formatDate(d) {
@@ -11,13 +11,13 @@ function formatDate(d) {
 }
 
 function dayName(d) {
-  return d.toLocaleDateString('en-US', { weekday: 'long' });
+  return d.toLocaleDateString("en-US", { weekday: "long" });
 }
 
 // ISO week number
 function isoWeekNumber(date) {
   const d = new Date(
-    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()),
   );
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
@@ -68,6 +68,7 @@ Write **1–3 concrete things** you understood better today.
 List **up to 3 things** that are still unclear.
 
 - What almost makes sense but doesn’t fully?
+- 
 - What would you like to see one more example of?
 - What feels fragile in your understanding?
 
